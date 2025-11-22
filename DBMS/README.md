@@ -1,4 +1,4 @@
-📊 Detailed Comparison
+### 📊 Detailed Comparison
 Feature	| Savepoint	| Checkpoint
 |-|-|-|
 Purpose	| To roll back part of a transaction	| To speed up crash recovery
@@ -8,7 +8,7 @@ Syntax	| SAVEPOINT point_name; ROLLBACK TO point_name;	| Automatic or admin-trig
 Persistence	| Temporary - exists only during transaction |	Permanent - written to disk
 
 
-📊 Conflict Serializability vs View Serializability
+### 📊 Conflict Serializability vs View Serializability
 Aspect	|  Conflict Serializability	| View Serializability
 |--|--|--|
 Definition	| Schedule can be transformed to serial schedule by swapping non-conflicting operations	| Schedule has the same view as some serial schedule
@@ -20,7 +20,8 @@ Performance	| Easier to check	| Harder to check (NP-complete)
 
 Ref: [Gate Smashers Lec 82](https://youtu.be/s8QlJoL1G6w?si=QZqc1YWRXkQf18Rj), 83, 84, 85
 
-🎯 Step-by-Step Rules for Solving Serializability Problems
+### 🎯 Step-by-Step Rules for Solving Serializability Problems
+
 📊 METHOD 1: Conflict Serializability (Using Precedence Graph)
 Step 1: Identify All Operations
 List all read/write operations with their transaction numbers.
@@ -57,6 +58,7 @@ If no cycles → Conflict Serializable
 If cycles exist → Not Conflict Serializable
 
 Result: ✅ No cycles = Conflict Serializable
+
 
 👁️ METHOD 2: View Serializability (3 Rules Check)
 Step 1: Check Initial Read Rule
