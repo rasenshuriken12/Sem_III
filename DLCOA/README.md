@@ -23,7 +23,7 @@
 ## Communication between CPU & memory
 - Access data or instructions in memory - CPU -> memory location -> Address bus
 - CPU -> read/write signal -> Control bus
-- For Writing - CPU -> data thru data bus -> [Memory Controller] -> Memory Location 
+- For Writing - CPU -> data thru data bus -> [Memory Controller] -> Memory Location    ...(Opp for Reading)
 
 
 
