@@ -1,4 +1,4 @@
-# Sem_III_Notes
+# Sem_III
 
 <br> ![Author: Deviprasad Shetty](https://img.shields.io/badge/Author-💫_Deviprasad%20Shetty-000000?style=for-the-badge&labelColor=white)
 <br> 
