@@ -1,4 +1,4 @@
-# DLCOA
+# Digital Logic & Computer Organization and Architecture
 
 **Topics**
 
