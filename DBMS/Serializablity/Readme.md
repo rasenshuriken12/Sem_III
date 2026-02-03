@@ -8,6 +8,14 @@ Imagine you’re at a bank with two tellers (transactions T1 and T2) serving cus
 If both tellers try to update the same account at the same time, chaos ensues.
 We want concurrency (both tellers working) but consistency (no wrong balances).
 
+*Example:*
+
+- T1: Read(A), Write(A)
+- T2: Read(A), Write(A)
+
+A possible schedule:
+- T1: Read(A) → T2: Read(A) → T1: Write(A) → T2: Write(A)
+
 **Serializability** = The result should look like one teller finished before the other started, even if they actually worked at the same time.
 
 > “Run transactions in parallel, but make the result look serial.”
