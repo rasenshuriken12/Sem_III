@@ -49,6 +49,7 @@ R1(A) → R2(A) → W1(A) → W2(A)
 - T2 reads A = 100
 - T1 writes 90
 - T2 writes 80
+
 Final value should be 70 → but becomes 80 ❌
 
 | Feature | Serial | Non-Serial |Serializable | 
