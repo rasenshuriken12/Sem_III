@@ -67,3 +67,20 @@ T1 → T2
 
 A schedule is conflict serializable if it can be transformed into a serial schedule by swapping only non-conflicting operations.
 
+**Conflicting Operations**
+
+- Read–Read → No conflict
+- Different data items → No conflict
+
+Ex. R(A) → R(B) ( No Conflict )
+
+Two operations conflict if:
+
+- Different transactions
+- Same data item
+- At least one is WRITE
+
+Conflicting pairs:
+Read–Write (R–W)
+Write–Read (W–R)
+Write–Write (W–W)
