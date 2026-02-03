@@ -72,7 +72,7 @@ A schedule is conflict serializable if it can be transformed into a serial sched
 - Read–Read → No conflict
 - Different data items → No conflict
 
-Ex. R(A) → R(B) ( No Conflict )
+Ex. R1(A) → R2(B) ( No Conflict )
 
 Two operations conflict if:
 
@@ -86,5 +86,11 @@ Conflicting pairs:
 - Write–Write (W–W)
 
 Ex. 
-- R(A) → R(A)
+- R1(A) → R2(A)
+- R1(A) → W2(A)
+- R1(A) → W2(B)
+- W1(A) → R2(A)
+- W1(A) → R2(B)
+- W1(A) → W2(A)
+- W1(A) → W2(B)
 
