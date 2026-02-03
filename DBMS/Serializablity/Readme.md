@@ -1,4 +1,4 @@
-## What is a Schedule?
+# What is a Schedule?
 
 A schedule is simply the order in which operations from different transactions are executed.
 
@@ -62,3 +62,8 @@ T1 → T2
 | Concurrency | ❌ No | ✔ Yes | ✔ Yes |
 | Correctness | ✔ Always | ❌ Not guaranteed | ✔ Guaranteed
 | Performance | ❌ Slow | ✔ Fast | ✔ Fast + Safe
+
+### Conflict Serializability 
+
+A schedule is conflict serializable if it can be transformed into a serial schedule by swapping only non-conflicting operations.
+
