@@ -95,4 +95,4 @@ Ex.
 - W1(A) → R2(A)
 - W1(A) → W2(A)
 
-
+> Two operations conflict iff they belong to different transactions, access the same data item, and at least one of them is a write operation.
