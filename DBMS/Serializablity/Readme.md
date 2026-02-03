@@ -81,6 +81,10 @@ Two operations conflict if:
 - At least one is WRITE
 
 Conflicting pairs:
-Read–Write (R–W)
-Write–Read (W–R)
-Write–Write (W–W)
+- Read–Write (R–W)
+- Write–Read (W–R)
+- Write–Write (W–W)
+
+Ex. 
+- R(A) → R(A)
+
