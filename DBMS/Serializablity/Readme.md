@@ -2,23 +2,6 @@
 
 A schedule is simply the order in which operations from different transactions are executed.
 
-## Serializability
-
-Imagine you’re at a bank with two tellers (transactions T1 and T2) serving customers (database operations).
-If both tellers try to update the same account at the same time, chaos ensues.
-We want concurrency (both tellers working) but consistency (no wrong balances).
-
-*Example:*
-
-- T1: Read(A), Write(A)
-- T2: Read(A), Write(A)
-
-A possible schedule:
-- T1: Read(A) → T2: Read(A) → T1: Write(A) → T2: Write(A)
-
-**Serializability** = The result should look like one teller finished before the other started, even if they actually worked at the same time.
-
-> “Run transactions in parallel, but make the result look serial.”
 
 ## Serial Schedule
 
@@ -36,12 +19,16 @@ Serial order:
 
 T1 completes fully → then T2 starts
 
+
 ## Non-Serial Schedule
 
 A non-serial schedule interleaves operations of multiple transactions.
-Copy code
 
 R1(A) → R2(A) → W1(A) → W2(A)
+
+Imagine you’re at a bank with two tellers (transactions T1 and T2) serving customers (database operations).
+If both tellers try to update the same account at the same time, chaos ensues.
+We want concurrency (both tellers working) but consistency (no wrong balances).
 
 *Example (problematic)*
 
@@ -51,6 +38,23 @@ R1(A) → R2(A) → W1(A) → W2(A)
 - T2 writes 80
 
 Final value should be 70 → but becomes 80 ❌
+
+
+## Serializable Schedule
+
+A schedule (usually non-serial) is serializable if its final effect is equivalent to some serial schedule.
+
+The result should look like one teller finished before the other started, even if they actually worked at the same time.
+
+> “Run transactions in parallel, but make the result look serial.”
+
+*Example*
+
+R1(A) → W1(A) → R2(A) → W2(A)
+
+Equivalent to:
+
+T1 → T2
 
 | Feature | Serial | Non-Serial |Serializable | 
 |--|--|--|--|
